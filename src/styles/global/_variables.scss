@@ -1,0 +1,39 @@
+// Paleta de Colores
+
+// Colores Principales (Brand)
+$color-primary: #064359; // Verde azulado oscuro (Header, Títulos, bordes de inputs, botones principales)
+$color-secondary: #dde866; // Verde lima/amarillo (Acentos, botón principal "Crear cuenta")
+$color-tertiary: #fce4c0; // Crema/Beige suave (Fondo de tarjetas, Detalles retro)
+
+// Superficies y Fondos (Light Mode)
+$color-surface: #fcf9f8; // Fondo general de la página
+$color-surface-dim: #dcd9d9; // Fondos secundarios o contenedores profundos
+$color-surface-bright: #fcf9f8; // Superficies con iluminación alta
+$color-surface-container-low: #f6f3f2; // Fondos de tarjetas o inputs
+$color-surface-container-lowest: #ffffff; // Fondo más claro posible
+
+// Modo Oscuro (usado intencionalmente en NotFoundPage)
+$color-dark-bg: #000000;
+$color-dark-text: #fcf9f8;
+$color-dark-accent: #cfda5a;
+
+// Estados y Semántica
+$color-error: #ba1a1a; // Rojo para acciones de eliminar
+$color-on-primary: #ffffff; // Texto sobre fondo primario
+$color-on-secondary: #606800; // Texto sobre fondo secundario (verificado en Figma: verde oliva oscuro, no negro)
+$color-outline: #70797d; // Bordes y líneas divisorias
+$color-outline-muted: #c1c7cd; // Bordes/texto de tabs inactivos (nuevo, confirmado en Figma)
+
+// Tipografía (confirmado en Figma)
+$font-heading: 'Montserrat', sans-serif; // Logo, botones principales
+$font-label: 'Space Grotesk', sans-serif; // Labels de formularios, links
+$font-body: 'Work Sans', sans-serif; // Texto de inputs, contenido general
+
+// Mapa de tema
+$jouoff-theme: (
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "background": $color-surface,
+  "text": #191c1e,
+  "card-bg": $color-tertiary
+);

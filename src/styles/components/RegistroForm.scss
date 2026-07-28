@@ -1,0 +1,49 @@
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+@use "../global/typography";
+
+.registro-form {
+  @include flex-column(24px);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__campo {
+    @include flex-column(8px);
+    align-items: flex-end;
+
+    label {
+      @extend .label-field;
+      align-self: flex-start;
+    }
+
+    input {
+      @include input-base;
+    }
+  }
+
+  &__boton {
+    @include button-primary;
+  }
+
+  &__error {
+    color: $color-error;
+    font-family: $font-body;
+    font-size: 14px;
+
+    &--general {
+      text-align: center;
+    }
+  }
+
+  &__exito {
+    color: $color-primary;
+    font-family: $font-label;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba($color-secondary, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+  }
+}
