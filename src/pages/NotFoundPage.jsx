@@ -1,6 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../hooks/useAuth'
 
 function NotFoundPage() {
+  const { estaAutenticado, cerrarSesion } = useAuth()
+  const navigate = useNavigate()
+
+  function handleLogout() {
+    cerrarSesion()
+    navigate('/login')
+  }
+
   return (
     <div className="notfound-page">
       <div className="notfound-page__icon">×_×</div>
@@ -12,6 +21,12 @@ function NotFoundPage() {
       <Link to="/" className="notfound-page__boton">
         ← Volver al diario
       </Link>
+      
+      {estaAutenticado && (
+        <button onClick={handleLogout} className="notfound-page__logout">
+          Cerrar sesión
+        </button>
+      )}
     </div>
   )
 }
