@@ -1,0 +1,33 @@
+@use '../global/variables' as *;
+@use '../global/mixins' as *;
+@use '../global/typography';
+
+.login-form {
+  @include flex-column(24px);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__campo {
+    @include flex-column(8px);
+
+    label {
+      @extend .label-field;
+    }
+
+    input {
+      @include input-base;
+    }
+  }
+
+  &__boton {
+    @include button-primary;
+  }
+
+  &__error {
+    color: $color-error;
+    font-family: $font-body;
+    font-size: 14px;
+    text-align: center;
+  }
+}
