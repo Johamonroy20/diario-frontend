@@ -24,10 +24,16 @@ $color-on-secondary: #606800; // Texto sobre fondo secundario (verificado en Fig
 $color-outline: #70797d; // Bordes y líneas divisorias
 $color-outline-muted: #c1c7cd; // Bordes/texto de tabs inactivos (nuevo, confirmado en Figma)
 
+// Coloes adicionales - Landing Page
+$color-text-secondary: #41484c; // Texto descriptivo (tagline, párrafo)
+$color-link: #285a71; // Link "Ya tengo cuenta"
+$color-copyright: #71787d; // Texto del footer
+$color-decorative-dot: #5c6300; // Punto decorativo junto al logo
+
 // Tipografía (confirmado en Figma)
-$font-heading: 'Montserrat', sans-serif; // Logo, botones principales
-$font-label: 'Space Grotesk', sans-serif; // Labels de formularios, links
-$font-body: 'Work Sans', sans-serif; // Texto de inputs, contenido general
+$font-heading: "Montserrat", sans-serif; // Logo, botones principales
+$font-label: "Space Grotesk", sans-serif; // Labels de formularios, links
+$font-body: "Work Sans", sans-serif; // Texto de inputs, contenido general
 
 // Mapa de tema
 $jouoff-theme: (
@@ -35,5 +41,5 @@ $jouoff-theme: (
   "secondary": $color-secondary,
   "background": $color-surface,
   "text": #191c1e,
-  "card-bg": $color-tertiary
+  "card-bg": $color-tertiary,
 );
