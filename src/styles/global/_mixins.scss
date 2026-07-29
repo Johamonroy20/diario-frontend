@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+@mixin focus-visible {
+  &:focus-visible {
+    outline: 3px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+@mixin flex-column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin input-base {
+  background-color: $color-surface-container-lowest;
+  border: 2px solid $color-primary;
+  border-radius: 12px;
+  padding: 17px 18px;
+  font-family: $font-body;
+  font-size: 16px;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-outline;
+  }
+
+  @include focus-visible;
+}
+
+@mixin button-primary {
+  background-color: $color-secondary;
+  border: 2px solid $color-primary;
+  border-radius: 12px;
+  color: $color-on-secondary;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 18px 2px;
+  @include flex-center(8px);
+  transition: transform 0.15s ease;
+
+  &:hover:not(:disabled) svg,
+  &:hover:not(:disabled) .icon-arrow {
+    transform: translateX(4px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  @include focus-visible;
+}
