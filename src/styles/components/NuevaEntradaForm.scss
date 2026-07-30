@@ -1,0 +1,97 @@
+@use '../global/variables' as *;
+@use '../global/mixins' as *;
+@use '../global/typography';
+
+.nueva-entrada-form {
+  @include flex-column(24px);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__seccion {
+    @include flex-column(12px);
+    background-color: $color-surface-container-low;
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  &__pregunta {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 16px;
+    color: $color-primary;
+  }
+
+  &__grid-animo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  &__opcion-animo {
+    @include input-base;
+    background-color: $color-surface-container-lowest;
+    font-family: $font-label;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 8px;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &--activa {
+      background-color: $color-secondary;
+      border-color: $color-primary;
+      color: $color-on-secondary;
+      font-weight: 600;
+    }
+
+    &:hover:not(&--activa) {
+      border-color: $color-primary;
+    }
+  }
+
+  &__campo {
+    @include flex-column(8px);
+
+    label {
+      @extend .label-field;
+    }
+
+    input,
+    textarea {
+      @include input-base;
+    }
+
+    textarea {
+      resize: vertical;
+      font-family: $font-body;
+      line-height: 1.5;
+    }
+  }
+
+  &__boton {
+    @include button-primary;
+  }
+
+  &__error {
+    color: $color-error;
+    font-family: $font-body;
+    font-size: 14px;
+
+    &--general {
+      text-align: center;
+    }
+  }
+
+  &__exito {
+    color: $color-primary;
+    font-family: $font-label;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba($color-secondary, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+  }
+}
