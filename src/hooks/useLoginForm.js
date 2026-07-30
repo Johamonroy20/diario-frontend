@@ -22,7 +22,7 @@ export function useLoginForm() {
 
     try {
       await iniciarSesion(formData);
-      navigate("/diario");
+      navigate("/entradas/nueva");
     } catch (err) {
       setError(
         err.response?.data?.error || "Ocurrió un error al iniciar sesión",
